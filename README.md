@@ -4,7 +4,11 @@
 ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
 The application is built using a native PHP backend and MySQL database, designed for deployment on standard Apache server environment (XAMPP/WAMP).
+
+# Note! 
+this repository is a imported project that was created a few weeks before this projects repository was created!. a lot of code and assets have been imported to be open sourced.
 
 ## Repository Structure
 
