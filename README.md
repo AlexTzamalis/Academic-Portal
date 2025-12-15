@@ -19,7 +19,9 @@ aswell as containing the exported sql database for academic purposes!
 Academic-Portal/
 ├── CSS/                  # Stylesheets
 ├── db/                   # Contains the Exported Phpmyadmin SQL database (Academic reason to why this exists)
-├── IMAGES/               # Image assets
+├── ASSETS/               # Image assets
 ├── JS/                   # JavaScript files
 ├── config.php            # Database connection configuration
+├── login_register.php    # Login and Register page with js switch logic
+├── contact.php           # Contact page with simple php logic
 └── index.php             # Main entry point/Landing page
