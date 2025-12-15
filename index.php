@@ -20,7 +20,7 @@
         <title>University of larisa</title>
 
         <!-- Βασικο CSS Αρχείο -->
-        <link  rel="stylesheet" href="homepage.css">
+        <link rel="stylesheet" href="CSS/homepage.css">
 
         <!--
            Leaflet CSS, Για τον διαδραστικο χάρτη
