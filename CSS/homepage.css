@@ -347,6 +347,86 @@ body {
 }
 
 /* 
+ * ANNOUNCEMENTS SECTION
+ * 
+ * Λίστα ανακοινώσεων με ημερομηνία, τίτλο και περιγραφή.
+ */
+.announcements {
+    padding: 50px 40px;
+    background-color: var(--light-gray);
+}
+
+.announcements-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Flexbox column για τη λίστα ανακοινώσεων */
+.announcement-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Κάθε ανακοίνωση */
+.announcement-item {
+    background-color: var(--white);
+    border: 1px solid var(--border-gray);
+    border-radius: 4px;
+    padding: 20px 24px;
+}
+
+/* Ημερομηνία ανακοίνωσης */
+.announcement-date {
+    font-size: 13px;
+    color: var(--text-gray);
+    margin-bottom: 6px;
+}
+
+/* Τίτλος ανακοίνωσης */
+.announcement-item h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+}
+
+/* Περιγραφή ανακοίνωσης */
+.announcement-item p {
+    font-size: 14px;
+    color: var(--text-gray);
+}
+
+
+/* 
+ * MAP SECTION
+ *
+ * Χάρτης με Leaflet.js που δείχνει την τοποθεσία του campus.
+ */
+.map-section {
+    padding: 50px 40px;
+    background-color: var(--white);
+}
+
+.map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/**
+ * Map Element
+ *
+ * Το div που χρησιμοποιεί το Leaflet για τον χάρτη.
+ */
+#map {
+    width: 100%;
+    height: 400px;
+    border: 1px solid var(--border-gray);
+    border-radius: 6px;
+    z-index: 1;                 /* Χαμηλό z-index για να μην καλύπτει το header */
+}
+
+/* 
  * FOOTER
  * 
  * Υποσέλιδο με πληροφορίες επικοινωνίας και links.
