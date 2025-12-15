@@ -483,3 +483,68 @@ body {
     font-size: 13px;
     color: #808080;
 }
+
+/* 
+ * RESPONSIVE STYLES
+ * 
+ * Προσαρμογές για μικρές οθόνες (tablets, κινητά).
+ * @media (max-width: 768px) ενεργοποιείται όταν
+ * το πλάτος της οθόνης είναι <= 768px.
+ */
+@media (max-width: 768px) {
+
+    /* Responsive: 1 στήλη σε μικρές οθόνες */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Μικρότερο padding στο header */
+    .header {
+        padding: 0 20px;
+    }
+
+    /* Stack navigation κάθετα σε mobile */
+    .nav-container {
+        height: auto;
+        flex-direction: column;
+        padding: 15px 0;
+        gap: 15px;
+    }
+
+    /* Wrap τα nav links */
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Μικρότερο padding στο hero */
+    .hero {
+        padding: 50px 20px;
+    }
+
+    /* Μικρότερος τίτλος hero */
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    /* Μικρότερο padding στα sections */
+    .quick-links,
+    .announcements,
+    .map-section {
+        padding: 40px 20px;
+    }
+
+    /* Μικρότερος χάρτης */
+    .map-placeholder {
+        height: 300px;
+    }
+
+    /* Μικρότερο padding στο footer */
+    .footer {
+        padding: 30px 20px;
+    }
+}
