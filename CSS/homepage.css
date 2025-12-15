@@ -170,3 +170,41 @@ body {
     background-color: var(--dark-red);
     color: var(--white);
 }
+
+
+/* 
+ * HERO SECTION
+ * 
+ * Το μεγάλο banner καλωσορίσματος με gradient background (Με λίγα λόγια βαζουμε background με 2 παρόμοια χρώματα για να
+ * για λιγότερη στατικότητα και αλλαγή τόνου απο τα πλευρα σε πλευρα).
+ */
+.hero {
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
+    color: var(--white);
+    padding: 100px 40px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+/* Container για το περιεχόμενο του hero */
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Τίτλος hero section */
+.hero h1 {
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+/* Υπότιτλος/περιγραφή hero section */
+.hero p {
+    font-size: 18px;
+    opacity: 0.8;               /* Λίγο πιο αχνό για contrast */
+    max-width: 600px;
+    line-height: 1.7;
+}
