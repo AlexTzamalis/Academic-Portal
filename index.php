@@ -51,7 +51,7 @@
                     <!-- Link στη σελίδα επικοινωνίας -->
                     <a href="contact.php" class="nav-link">Επικοινωνία</a>
                     <!-- Κουμπί σύνδεσης -->
-                    <a href="registration.php" class="nav-link login-btn">Σύνδεση</a>
+                    <a href="login_register.php" class="nav-link login-btn">Σύνδεση</a>
                 </div>
             </nav>
         </header>

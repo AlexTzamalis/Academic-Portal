@@ -167,9 +167,6 @@ function isActiveForm($formName, $activeForm) {
                     
                     <!-- Submit button -->
                     <button type="submit" name="register">Εγγραφή</button>
-
-                    <!-- Hint με τους κωδικούς (για testing) -->
-                    <p class="hint">Κωδικοί: STUD2025 (φοιτητής) / PROF2025 (καθηγητής)</p>
                     
                     <!-- Link για εναλλαγή στη φόρμα σύνδεσης -->
                     <p>Έχεις ήδη λογαριασμό; <a href="#" onclick="showForm('login-form')">Σύνδεση</a></p>
