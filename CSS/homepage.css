@@ -345,3 +345,61 @@ body {
     font-size: 14px;
     font-weight: 500;
 }
+
+/* 
+ * FOOTER
+ * 
+ * Υποσέλιδο με πληροφορίες επικοινωνίας και links.
+ * Χρησιμοποιούμε Grid για τις στήλες.
+ */
+.footer {
+    background-color: var(--text-dark);
+    color: var(--white);
+    padding: 40px;
+}
+
+/**
+ * Footer Grid
+ * 
+ * auto-fit με minmax για responsive στήλες.
+ * Σε μεγάλες οθόνες: 4 στήλες
+ * Σε μικρές: stack κάθετα
+ */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+/* Τίτλος κάθε section του footer */
+.footer-section h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--white);
+}
+
+/* Κείμενο και links στο footer */
+.footer-section p,
+.footer-section a {
+    font-size: 14px;
+    color: #B0B0B0;
+    line-height: 1.8;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: var(--white);
+}
+
+/* Κάτω μέρος footer με copyright */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #404040;
+    font-size: 13px;
+    color: #808080;
+}
