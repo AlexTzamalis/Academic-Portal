@@ -1,0 +1,75 @@
+/**
+ * Homepage Styles - University Portal
+ * 
+ * Αρχείο CSS για την αρχική σελίδα (landing page) του Πανεπιστημίου.
+ * 
+ * @Author AlexTzamalis
+ */
+
+ /* 
+ * RESET & GLOBAL STYLES
+ * 
+ * Μηδενίζει τα default margins/paddings του browser
+ * και βάζει box-sizing: border-box για πιο εύκολους υπολογισμούς
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**
+ * CSS Variables (Μεταβλητές) 
+ * Ακόμη και ας δυσκόλευει την χρήση χρώματον με αυτον τον τροπο.
+ * βελτιώνει την παραγώγη γρήγορον αλλαγών μέσα στην σελίδα και αλλαγη Theme ανα πάσα στιγμη
+ * 
+ * Αποθηκεύουμε τα χρώματα σε μεταβλητές για να τα χρησιμοποιούμε
+ * παντού στο αρχείο. Αν θέλουμε να αλλάξουμε χρώμα, το αλλάζουμε
+ * μόνο εδώ και αλλάζει παντού αυτόματα.
+ */
+:root {
+    --primary-red: #8B1538;      /* Κύριο χρώμα */
+    --dark-red: #6B1028;         /* Hover effects */
+    --white: #FFFFFF;            
+    --light-gray: #F5F5F5;       /* Για backgrounds */
+    --medium-gray: #E8E8E8;      
+    --text-gray: #4A4A4A;        /* Για δευτερεύον κείμενο */
+    --text-dark: #2D2D2D;        /* Κύριο κείμενο */
+    --border-gray: #D0D0D0;      /* Για borders */
+}
+
+/**
+ * Smooth Scrolling
+ * 
+ * Όταν κάνουμε click σε anchor links (π.χ. href="#about") αναπήδηση απο <section> σε <section>
+ * η σελίδα κάνει scroll ομαλά αντί να πηδάει απότομα
+ */
+html {
+    scroll-behavior: smooth;
+}
+
+/**
+ * Body Styles
+ * Βασικα χαρακτηριστικά της σελίδας
+ */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-gray);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* 
+ * Header & navigation 
+ * Mπάρα με το logo και τα links πλοήγησης.
+ * Χρησιμοποιούμε position sticky για να μένει στην κορυφή
+ * όταν κάνουμε scroll.
+ */
+.header {
+    background-color: var(--white);
+    padding: 0 40px;
+    position: sticky;           /* Μένει κολλημένο στην κορυφή */
+    top: 0;
+    z-index: 100;               /* Πάνω από άλλα elements... Παραδειγμα του z-index -> (Y υψος, X πλάτος, Z βάθος) */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);  /* Απαλή σκιά με μικρο rgb(a) που το a είναι το opacity */
+}
