@@ -208,3 +208,140 @@ body {
     max-width: 600px;
     line-height: 1.7;
 }
+
+/* 
+ * QUICK LINKS SECTION
+ * 
+ * Κάρτες με γρήγορη πρόσβαση σε διάφορες υπηρεσίες.
+ * Χρησιμοποιούμε CSS Grid για το layout.
+ */
+.quick-links {
+    padding: 50px 40px;
+    background-color: var(--white);
+}
+
+.quick-links-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+}
+
+/**
+ * Links Grid
+ * 
+ * CSS Grid με auto-fit για responsive κάρτες.
+ * minmax(250px, 1fr) = κάθε κάρτα τουλάχιστον 250px,
+ * αλλά μπορεί να μεγαλώσει για να γεμίσει το χώρο.
+ */
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Κάθε κάρτα link */
+.link-card {
+    background-color: var(--light-gray);
+    border: 1px solid var(--border-gray);
+    border-radius: 6px;
+    padding: 24px;
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect για τις κάρτες */
+.link-card:hover {
+    border-color: var(--primary-red);
+    box-shadow: 0 2px 8px rgba(139, 21, 56, 0.1);
+}
+
+.link-card h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.link-card p {
+    font-size: 14px;
+    color: var(--text-gray);
+    line-height: 1.5;
+}
+
+
+/* 
+ * CAMPUS GALLERY SECTION
+ * 
+ * Φωτογραφίες του campus σε grid layout.
+ * Κάθε εικόνα έχει hover effect με zoom.
+ */
+.campus-gallery {
+    padding: 50px 40px;
+    background-color: var(--white);
+}
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/**
+ * Gallery Grid
+ * 
+ * 3 στήλες σε desktop, 1 στήλη σε mobile (με μελοντικα @media query)
+ */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/**
+ * Gallery Item
+ * 
+ * Κάθε εικόνα με caption overlay.
+ * aspect-ratio: 4/3 κρατάει σταθερές αναλογίες.
+ */
+.gallery-item {
+    position: relative;         /* Για το absolute positioned caption */
+    border-radius: 8px;
+    overflow: hidden;           /* Κόβει τα corners της εικόνας */
+    aspect-ratio: 4/3;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;          /* Καλύπτει όλο το container χωρίς distortion */
+    transition: transform 0.3s ease;
+}
+
+/* Zoom effect στο hover */
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/**
+ * Gallery Caption
+ * 
+ * Κείμενο πάνω στην εικόνα με gradient overlay
+ * για να φαίνεται καλύτερα το λευκό κείμενο.
+ */
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 500;
+}
