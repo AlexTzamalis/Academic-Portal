@@ -7,7 +7,8 @@
 
 The application is built using a native PHP backend and MySQL database, designed for deployment on standard Apache server environment (XAMPP/WAMP).
 
-# Note! this repository is a imported project that was created a few weeks before this projects repository was created!. a lot of code and assets have been imported to be open sourced.
+# Note! 
+this repository is a imported project that was created a few weeks before this projects repository was created!. a lot of code and assets have been imported to be open sourced.
 
 ## Repository Structure
 
