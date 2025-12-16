@@ -88,7 +88,7 @@ function isActiveForm($formName, $activeForm) {
             Το ?v=5 αναγκάζει τον browser να φορτώσει το νέο CSS
             αντί να χρησιμοποιήσει cached version
         -->
-        <link rel="stylesheet" href="CSS/style.css?v=5">
+        <link rel="stylesheet" href="CSS/login_register.css?v=5">
     </head>
     <body>
 

@@ -1,0 +1,219 @@
+/**
+ * Registration/Login Styles
+ * 
+ * @Author AlexTzamalis
+ * UEL : 2872177
+ */
+
+
+/* 
+ * RESET & GLOBAL STYLES
+ * 
+ * Μηδενίζει margins/paddings και ορίζει default font
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/**
+ * CSS Variables (Μεταβλητές Χρωμάτων)
+ * Για ευκολία και γρηγορή αλλαγή "theme" οπωσ και στο homepage.css
+ * 
+ * Ίδια χρώματα με το homepage.css για consistency
+ */
+:root {
+    --primary-red: #8B1538;      /* Κύριο κόκκινο */
+    --dark-red: #6B1028;         /* Σκούρο κόκκινο για hover */
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --text-gray: #4A4A4A;
+    --text-dark: #2D2D2D;
+    --border-gray: #D0D0D0;
+}
+
+
+/* 
+ * BODY ΚΕΝΤΡΑΡΙΣΜΑ ΦΟΡΜΑΣ
+ * 
+ * Χρησιμοποιούμε Flexbox για να κεντράρουμε τη φόρμα
+ * τόσο οριζόντια όσο και κάθετα στη σελίδα.
+ */
+body{
+    display: flex;
+    justify-content: center;    /* Κεντράρισμα οριζόντια */
+    align-items: center;        /* Κεντράρισμα κάθετα */
+    min-height: 100vh;          /* Τουλάχιστον όλο το ύψος της οθόνης */
+    background: linear-gradient(135deg, var(--light-gray) 0%, #E0E0E0 100%);
+    color: var(--text-dark);
+}
+
+/**
+ * Container
+ * 
+ * Wrapper για τις φόρμες με μικρό margin για mobile
+ */
+.container {
+    margin: 0 15px;
+}
+
+
+/*
+ * FORM BOX
+ * 
+ * Το λευκό κουτί που περιέχει τη φόρμα login/register.
+ * Χρησιμοποιούμε display none για να κρύβουμε τη μία φόρμα
+ * και display block (μέσω .active) για να δείχνουμε την άλλη.
+ */
+.form-box{
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  /* Απαλή σκιά opacity */
+    display: none;              /* Κρυμμένο by default */
+}
+
+/**
+ * Active Form
+ * 
+ * Η φόρμα με class .active εμφανίζεται.
+ * Το JavaScript αλλάζει ποια φόρμα έχει το .active
+ * όταν ο χρήστης πατάει "Εγγραφή" ή "Σύνδεση". με το script LoginRegisterScript.js
+ */
+.form-box.active{
+    display: block;
+}
+
+
+/* 
+ * FORM TITLE
+ * 
+ * "Σύνδεση" ή "Εγγραφή" πάνω από τα πεδία
+ */
+h2{
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 24px;
+    color: var(--text-dark);
+}
+
+
+/* 
+ * INPUT FIELDS & SELECT
+ * 
+ * Styles για τα πεδία εισαγωγής (email, password, etc.)
+ * και το dropdown επιλογής ρόλου.
+ */
+input, select {
+    width: 100%;                /* Γεμίζει όλο το πλάτος */
+    padding: 12px 14px;
+    background: var(--light-gray);
+    border-radius: 4px;
+    border: 1px solid var(--border-gray);
+    outline: none;              /* Αφαιρεί το default outline */
+    font-size: 15px;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    transition: border-color 0.2s ease;  /* Smooth transition για focus */
+}
+
+/**
+ * Focus State
+ * 
+ * Όταν ο χρήστης κάνει click σε ένα πεδίο,
+ * το border γίνεται κόκκινο για να φαίνεται
+ * ποιο πεδίο είναι ενεργό.
+ */
+input:focus, select:focus {
+    border-color: var(--primary-red);
+}
+
+
+/* 
+ * SUBMIT BUTTON 
+ * 
+ * Το κουμπί "Σύνδεση" ή "Εγγραφή"
+ */
+button {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-red);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;            /* Αντι για δεικτη, δειχνει χερακι στο hover. Για αλλαγη οψης στον χρηστη οταν κανει hover κουμπια*/
+    font-size: 15px;
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 16px;
+    transition: background-color 0.2s ease;
+}
+
+/* Hover effect*/
+button:hover{
+    background: var(--dark-red);
+}
+
+
+/* 
+ * 
+ * "Δεν έχεις λογαριασμό; Εγγραφή" κτλ.
+ */
+p {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--text-gray);
+}
+
+/* Links μέσα στο paragraph */
+p a {
+    color: var(--primary-red);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+p a:hover{
+    text-decoration: underline;
+}
+
+
+/* 
+ * ERROR MESSAGE - ΜΗΝΥΜΑ ΣΦΑΛΜΑΤΟΣ
+ * 
+ * Εμφανίζεται όταν υπάρχει error (π.χ. λάθος κωδικός).
+ * PHP function που δημιουργεί ένα tag <p class="error-message"> με το μήνυμα για καθε error 
+ * 
+ */
+.error-message {
+    padding: 12px;
+    background: #f8d7da;       
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--primary-red);
+    text-align: center;
+    margin-bottom: 16px;
+    border: 1px solid #f1aeb5;
+}
+
+
+/* 
+ * SUCCESS MESSAGE - ΜΗΝΥΜΑ ΕΠΙΤΥΧΙΑΣ
+ * 
+ * Εμφανίζεται όταν η εγγραφή είναι επιτυχής.
+ * 
+ */
+.success-message {
+    padding: 12px;
+    background: #d4edda;        
+    border-radius: 4px;
+    font-size: 14px;
+    color: #155724;             
+    text-align: center;
+    margin-bottom: 16px;
+    border: 1px solid #c3e6cb;
+}
+
