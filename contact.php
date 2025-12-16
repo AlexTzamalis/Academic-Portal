@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <!-- Link με anchor στο about section του index.php -->
                 <a href="index.php#about" class="nav-link">Σχετικά</a>
                 <a href="contact.php" class="nav-link">Επικοινωνία</a>
-                <a href="registration.php" class="nav-link login-btn">Σύνδεση</a>
+                <a href="login_register.php" class="nav-link login-btn">Σύνδεση</a>
             </div>
         </nav>
     </header>
