@@ -17,11 +17,14 @@ aswell as containing the exported sql database for academic purposes!
 
 ```text
 Academic-Portal/
-├── CSS/                  # Stylesheets
-├── db/                   # Contains the Exported Phpmyadmin SQL database (Academic reason to why this exists)
-├── ASSETS/               # Image assets
-├── JS/                   # JavaScript files
-├── config.php            # Database connection configuration
-├── login_register.php    # Login and Register page with js switch logic
-├── contact.php           # Contact page with simple php logic
-└── index.php             # Main entry point/Landing page
+├── CSS/                        # Stylesheets
+├── db/                         # Contains the Exported Phpmyadmin SQL database (Academic reasons to why this exists in the first place)
+├── ASSETS/                     # Image assets
+├── JS/                         # JavaScript files
+├── dashboard.php               # Student dashboard (needs login)
+├── admin_dashboard.php         # Admin dashboard (needs login)
+├── config.php                  # Database connection configuration
+├── login_register.php          # Login and Register page with js switch logic
+├── login_register_handler.php  # Login and password match logic
+├── contact.php                 # Contact page with simple php logic
+└── index.php                   # Main entry point/Landing page
