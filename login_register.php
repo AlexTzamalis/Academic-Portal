@@ -104,8 +104,8 @@ function isActiveForm($formName, $activeForm) {
             -->
             <div class="form-box <?= isActiveForm('login', $activeForm); ?>" id="login-form">
 
-                <!-- action: στέλνει τα δεδομένα στο login_register.php -->
-                <form action="login_register.php" method="post">
+                <!-- action: στέλνει τα δεδομένα στο login_register_handler.php -->
+                <form action="login_register_handler.php" method="post">
                     <h2>Σύνδεση</h2>
                     
                     <!-- Εμφάνιση success message (μετά από επιτυχή εγγραφή) -->
@@ -133,7 +133,7 @@ function isActiveForm($formName, $activeForm) {
             -->
             <div class="form-box <?= isActiveForm('register', $activeForm); ?>" id="register-form">
 
-                <form action="login_register.php" method="post">
+                <form action="login_register_handler.php" method="post">
                     <h2>Εγγραφή</h2>
                     
                     <!-- Εμφάνιση error message (αν υπάρχει) -->
