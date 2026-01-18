@@ -216,16 +216,12 @@ if (isset($_POST['login'])) {
         $_SESSION['email'] = $user['email'];
         $_SESSION['role'] = $role;
         
-        /**  Redirect στο κατάλληλο dashboard
+        /**  Redirect στο unified dashboard
          * 
-         * NOTE!, Χρειάζεται αλλαγή διότι θα μεταφερθούμε σε μονό αρχείο για dashboard αντι για admin και normal dashboard αρχεια
-         * διοτι η εργασία αλλαξε!!!! νεο github version θα υπάρχει με την αλλαγή αυτην.!
+         * Και οι δύο ρόλοι (student & admin) πηγαίνουν στο ίδιο dashboard
+         * που προσαρμόζεται δυναμικά ανάλογα με τον ρόλο
          */
-        if ($role === 'admin') {
-            header("Location: admin_dashboard.php");
-        } else {
-            header("Location: dashboard.php");
-        }
+        header("Location: dashboard.php");
         exit();
     }
     

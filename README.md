@@ -21,8 +21,7 @@ Academic-Portal/
 ├── db/                         # Contains the Exported Phpmyadmin SQL database (Academic reasons to why this exists in the first place)
 ├── ASSETS/                     # Image assets
 ├── JS/                         # JavaScript files
-├── dashboard.php               # Student dashboard (needs login)
-├── admin_dashboard.php         # Admin dashboard (needs login)
+├── dashboard.php                # Unified dashboard for students and professors (needs login)
 ├── config.php                  # Database connection configuration
 ├── login_register.php          # Login and Register page with js switch logic
 ├── login_register_handler.php  # Login and password match logic

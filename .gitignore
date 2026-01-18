@@ -1,0 +1,41 @@
+# Ignore all Markdown documentation files
+*.md
+
+# Ignore all SQL database files
+*.sql
+
+# Ignore database exports
+**/db/*.sql
+
+# Common PHP/Development files to ignore
+.env
+.env.local
+.htaccess.local
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
